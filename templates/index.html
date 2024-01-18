@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>DedSec Website Detector</title>
+{% endblock %}
+
+{% block body %}
+<div class="hear" >
+    <div class="main">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/Rlogo.jpeg') }}" alt="Logo">
+        </div>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">URL History</a></li>
+            <li><a href="#">Live Data Analysis</a></li>
+            <li><a href="#">Test Results</a></li>
+            <li><a href="#">Dataset(URL History)</a></li>
+        </ul>
+    </div>
+    <div class="form-box">
+        <form>
+            <label for="url">Enter URL Protocol:</label>
+            <input type="text" id="url" name="url" placeholder="e.g., http://example.com">
+            <div class="button">
+                <a href="#" class="btn">Predict</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
